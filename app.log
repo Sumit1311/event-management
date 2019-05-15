@@ -1,0 +1,21 @@
+Listening on  port 80
+[0mGET /new [36m304 [0m519.353 ms - -[0m
+[0mGET /stylesheets/bootstrap.min.css [36m304 [0m14.430 ms - -[0m
+[0mGET /stylesheets/bootstrap-datetimepicker.min.css [36m304 [0m14.472 ms - -[0m
+[0mGET /stylesheets/calendar.min.css [36m304 [0m14.312 ms - -[0m
+[0mGET /stylesheets/main.css [36m304 [0m13.490 ms - -[0m
+[0mGET /javascripts/jquery/jquery.min.js [36m304 [0m8.460 ms - -[0m
+[0mGET /javascripts/underscore/underscore-min.js [36m304 [0m7.438 ms - -[0m
+[0mGET /javascripts/bootstrap.min.js [36m304 [0m2.712 ms - -[0m
+[0mGET /javascripts/popper.min.js [36m304 [0m1.436 ms - -[0m
+[0mGET /javascripts/bootstrap-datetimepicker.min.js [36m304 [0m0.552 ms - -[0m
+[0mGET /javascripts/calendar.min.js [36m304 [0m0.727 ms - -[0m
+[0mGET /javascripts/init.js [36m304 [0m1.402 ms - -[0m
+[0mGET /javascripts/new.js [36m304 [0m2.112 ms - -[0m
+read data from file [{"eventTitle":"sdf","eventDescription":"sdf","eventStartTime":1556746800000,"eventEndTime":1557261300000,"eventLatitude":18.5204,"eventLongitude":73.8567,"id":6}]
+From  1556649000000  To  1559327400000
+[0mGET /api/events?from=1556649000000&to=1559327400000&utc_offset_from=-330&utc_offset_to=-330 [36m304 [0m5.423 ms - -[0m
+[0mGET /tmpls/month.html [36m304 [0m0.746 ms - -[0m
+[0mGET /tmpls/month-day.html [36m304 [0m0.534 ms - -[0m
+[0mGET /tmpls/events-list.html [36m304 [0m2.805 ms - -[0m
+[0mPOST /new [33m422 [0m42.712 ms - 88[0m

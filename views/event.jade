@@ -1,0 +1,19 @@
+extends layout
+
+block content
+ div.container
+  .row
+   dl.col-md-6
+    dt Event Title
+    dd= event.eventTitle
+   dl.col-md-6
+    dt Event Detail
+    dd= event.eventDescription
+  .row
+   dl.col-md-6
+    dt Event Location
+   .col-md-6#location-map
+  input(type="hidden" name="eventLatitude" value= event.eventLatitude)
+  input(type="hidden" name="eventLongitude" value= event.eventLongitude)
+  script(src="/javascripts/init.js")
+  script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyAN1ocnE8fVldtSL90kIgLwyqSVguq5zo8&callback=initEventMap', defer='', async='')

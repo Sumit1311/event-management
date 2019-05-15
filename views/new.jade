@@ -1,0 +1,32 @@
+extends layout
+
+block content
+ div.container
+  h1= title
+  form#createForm(action="/new" method="POST")
+   input(type="hidden" name="eventStartDate")
+   input(type="hidden" name="eventEndDate")
+   input(type="hidden" name="eventLatitude")
+   input(type="hidden" name="eventLongitude")
+   
+   .form-group
+     label(for='inputEventTitle') Event Title
+     input#inputEventTitle.form-control(type='text', aria-describedby='eventTitleHelp', placeholder='Enter Event Title', name='eventTitle', required, maxlength=20)
+   .form-group
+     label(for='inputEventDescription') Even Description
+     textarea#inputEventDescription.form-control(rows='3', name='eventDescription', required, maxlength=500)
+   .form-group.row
+     label.col-sm-2.col-form-label(for='inputStartDate') Start Date
+     .col-sm-4
+        input.datetimepicker(id="inputStartDate", type="text" placeholder="Enter start date", readonly, required)
+     label.col-sm-2.col-form-label(for='inputEndDate') End Date
+     .col-sm-4
+        input.datetimepicker(id="inputEndDate", type="text" placeholder="Enter End date" readonly, required)
+   .form-group.row
+     label.col-md-12(for='inputEventLocation') Event Location
+     #location-map
+   script(src="/javascripts/init.js")
+   script(src="/javascripts/new.js")
+   script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyAN1ocnE8fVldtSL90kIgLwyqSVguq5zo8&callback=initCreateMap', defer='', async='')
+
+   button.btn.btn-primary(type='submit') Submit

@@ -1,0 +1,28 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
+    link(rel='stylesheet', href='/stylesheets/bootstrap-datetimepicker.min.css')
+    link(rel='stylesheet', href='/stylesheets/calendar.min.css')
+    link(rel='stylesheet', href='/stylesheets/main.css')
+    script(src="/javascripts/jquery/jquery.min.js")
+    script(src="/javascripts/underscore/underscore-min.js")
+    script(src="/javascripts/popper.min.js")
+    script(src="/javascripts/bootstrap.min.js")
+    script(src="/javascripts/bootstrap-datetimepicker.min.js")
+    script(src="/javascripts/calendar.min.js")
+  body
+    block content
+  #events-modal.modal.fade(aria-hidden='true', aria-labelledby='exampleModalLabel', role='dialog', tabindex='-1')
+    .modal-dialog(role='document')
+      .modal-content
+        .modal-header
+          h5#exampleModalLabel.modal-title Modal title
+          button.close(aria-label='Close', data-dismiss='modal', type='button')
+            span(aria-hidden='true') ×
+        .modal-body
+          | ...
+        .modal-footer
+          button.btn.btn-secondary(data-dismiss='modal', type='button') Close
+          button.btn.btn-primary(type='button') Save changes
