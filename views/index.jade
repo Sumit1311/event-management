@@ -2,23 +2,24 @@ extends layout
 
 block content
  div.container
-  div.row
-   .col-sm
-    a.btn.btn-primary(href="/new") New
   .page-header.row
-   .col-md-5
+   h1 Event Management Application
+  .page-header.row
+   .col-md-3
       h3
-   .col-md-7
-      .btn-group.mr-2
+   .col-md-3
+      a.btn.btn-success(href="/new") Create New Event
+   .col-md-6
+      .btn-group.mr-2.float-right
         button.btn.btn-primary(data-calendar-nav='prev') << Prev
         button.btn(data-calendar-nav='today') Today
         button.btn.btn-primary(data-calendar-nav='next') Next >>
-      .btn-group.mr-2
+      .btn-group.mr-2.float-right
         button.btn.btn-warning(data-calendar-view='year') Year
         button.btn.btn-warning(data-calendar-view='month') Month
         button.btn.btn-warning(data-calendar-view='week') Week
         button.btn.btn-warning.active(data-calendar-view='day') Day
     
   .row
-   .calendar
+   .calendar.col-md-12
     script(src="/javascripts/init.js")
