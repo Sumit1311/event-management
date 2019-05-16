@@ -21,7 +21,7 @@ router.get('/api/events', function(req, res) {
     var listToSend = [];
     for(var i = 0; i < list.length; i++) {
         var l = list[i];
-        if(parseInt(l.eventStartTime) >= f && parseInt(l.eventEndTime) <= t) {
+        if(parseInt(l.eventStartTime) >= f || parseInt(l.eventEndTime) <= t) {
         var o = {
           "id": l.id,
           "title": l.eventTitle,
